@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>THE STAR WARS FILM TEST</title>
+		<link href="style.css" rel = "stylesheet" type="text/css">
+		<link rel="icon" href="img/icono.ico" type="image/x-icon">
+	</head>
+
+
+	<!-- esto es un comentario-->
+	<body>		
+		<section class="banner">
+			<h1>the star wars film test</h1>
+			<h2>long time ago, in a website far far away...</h2>
+		</section>
+
+		<div class="cajares" id="res">
+				<h1>HAS ACERTADO EL <span id="resporc">%%</span>% DEL CUESTIONARIO</h1>
+				<div>
+					<table class="tablares">
+						<tr><td>Puntos: Una Nueva Esperanza</td>		<td><span id="p1sc">N</span>/10</td></tr>
+						<tr><td>Puntos: El Imperio Contraataca</td>		<td><span id="p2sc">N</span>/10</td></tr>
+						<tr><td>Puntos: El Retorno Del Jedi</td>		<td><span id="p3sc">N</span>/10</td></tr>
+						<tr><td>Puntos: La Amenaza Fantasma</td>		<td><span id="p4sc">N</span>/10</td></tr>
+						<tr><td>Puntos: El Ataque De Los Clones</td>	<td><span id="p5sc">N</span>/10</td></tr>
+						<tr><td>Puntos: La Venganza De Los Siths</td>	<td><span id="p6sc">N</span>/10</td></tr>
+					</table>
+				</div>
+				<img id="logores" class="logores_rebel" src="img/resultado/rebel.png" alt="logoresultado">
+				<h2 id="sermon" class="azul">La Fuerza esta contigo, pero aun no eres un Jedi.</h2>
+
+				<input type="button" id="volver" value="Ver Errores" class="normal" onclick="Ocultar()">
+				<input type="button" id="reset" value="Reintentar" class="normal" onclick="Resetear()">
+
+		</div>
+
+		<section class="cuestionario" id="main">
+			<form name="frmMain" method="get" onsubmit="Procesar()">
+				<section class="lista">
+					<div class="lista">
+							<ul>
+								<li><input type="button" id="opc1" value="Una Nueva Esperanza" class="normal"></li>
+								<li><input type="button" id="opc2" value="El Imperio Contraataca" class="normal"></li>
+								<li><input type="button" id="opc3" value="El Retorno Del Jedi" class="normal"></li>
+								<li><input type="button" id="opc4" value="La Amenaza Fanstasma" class="normal"></li>
+								<li><input type="button" id="opc5" value="El Ataque De Los Clones" class="normal"></li>
+								<li><input type="button" id="opc6" value="La Venganza De Los Siths" class="normal"></li>
+							</ul>
+					</div>				
+					<div class="lista" id="btnEnvio" >
+						<input type="submit" id="Envio" value="Terminar y Enviar" onsubmit="Procesar()">
+						<p id="error">Responde todas las preguntas antes de enviar</p>
+					</div>
+				</section>
+
+				<div class="prgnts">
+						<div id="pelicula1">
+							<img class="poster" src="img/pelicula1/poster.jpg" alt="poster de la pelicula">
+							<h2>UNA NUEVA ESPERANZA</h2>
+							<div class="pregunta" id="1a">
+								<img class="item" src="img/item.png" alt="item">
+								<label>¿Como es la primera escena de la película?</label>
+								<select name="peli1_pregunta_a">
+									<option value="null" selected disabled>--Elija una opcion---</option>
+									<option value="a">Un enfrentamiento entre tropas rebeldes e imperiales</option>
+									<option value="b">Una fiesta al borde de un crucero espacial</option>
+									<option value="c">Una Marcha de Tropas imperiales</option>
+									<option value="d">Una persecución de naves espaciales</option>
+								</select>
+							</div>
+							<div class="pregunta" id="1b">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Porque Luke quiere abandonar su planeta natal?</label>
+									<select name="peli1_pregunta_b">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Quiere buscar al asesino de su padre</option>
+										<option value="b">Luego de la muerte de sus tíos, nada lo ata a ese lugar</option>
+										<option value="c">Quiere reunirse con su padre, un piloto espacial</option>
+										<option value="d">Busca unirse a la alianza rebelde</option>
+									</select>
+							</div>
+							<div class="pregunta" id="1c">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿A quienes conocen Luke y Obi-Wan en Mos Eisley?</label>
+									<select name="peli1_pregunta_c">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">A Porkings y su flota</option>
+										<option value="b">A Darth Vader y sus tropas</option>
+										<option value="c">A Java The Script y sus Tipos</option>
+										<option value="d">A Han Solo y Chewbacca</option>
+									</select>
+							</div>
+							<div class="pregunta" id="1d">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que personaje no logra escapar de la estrella de la muerte?</label>
+									<select name="peli1_pregunta_d">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Obi-Wan Kenobi</option>
+										<option value="b">Jar Jar Binks</option>
+										<option value="c">Darth Maul</option>
+										<option value="d">Qui-Gon Jinn</option>
+									</select>
+							</div>
+							<div class="pregunta" id="1e">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como se disputa el primer enfrentamiento entre Luke y Darth Vader?</label>
+									<select name="peli1_pregunta_e">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Un duelo a muerte con sables de luz</option>
+										<option value="b">Luke es perseguido por Darth Vader en un caza imperial</option>
+										<option value="c">Una pelea de puños</option>
+										<option value="d">Una carrera de cazas</option>
+									</select>
+							</div>
+							<div class="pregunta" id="1f">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Quien ayuda a Luke en el ultimo enfrentamiento?</label>
+										<select name="peli1_pregunta_f">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Yoda</option>
+										<option value="b">La Princesa Leia</option>
+										<option value="c">Han Solo</option>
+										<option value="d">Un Stormtrooper renegado</option>
+								</select>
+							</div>
+
+							<h3>¿Quiénes son ellos?</h3>
+
+							<table class="pregunta">
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula1/p1.jpg">
+											<input type="radio" id="peli1_pj1_a" name="peli1_pj1" value="a">
+											<label for="peli1_pj1_a">Luke Skywalker</label>
+											<input type="radio" id="peli1_pj1_b" name="peli1_pj1" value="b">
+											<label for="peli1_pj1_b">Ben Kenobi</label>
+											<input type="radio" id="peli1_pj1_c" name="peli1_pj1" value="c">
+											<label for="peli1_pj1_c">Owen Lars</label>
+											<input type="radio" id="peli1_pj1_d" name="peli1_pj1" value="d">
+											<label for="peli1_pj1_d">Han Solo</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula1/p2.jpg">
+											<input type="radio" id="peli1_pj2_a" name="peli1_pj2" value="a">
+											<label for="peli1_pj2_a">Wilhuff Tarkin</label>
+											<input type="radio" id="peli1_pj2_b" name="peli1_pj2" value="b">
+											<label for="peli1_pj2_b">Palpatine</label>
+											<input type="radio" id="peli1_pj2_c" name="peli1_pj2" value="c">
+											<label for="peli1_pj2_c">Darth Vader</label>
+											<input type="radio" id="peli1_pj2_d" name="peli1_pj2" value="d">
+											<label for="peli1_pj2_d">General Kenobi</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula1/p3.jpg">
+											<input type="radio" id="peli1_pj3_a" name="peli1_pj3" value="a">
+											<label for="peli1_pj3_a">Yoda</label>
+											<input type="radio" id="peli1_pj3_b" name="peli1_pj3" value="b">
+											<label for="peli1_pj3_b">Citripio</label>
+											<input type="radio" id="peli1_pj3_c" name="peli1_pj3" value="c">
+											<label for="peli1_pj3_c">Jabba The Hutt</label>
+											<input type="radio" id="peli1_pj3_d" name="peli1_pj3" value="d">
+											<label for="peli1_pj3_d">Jek Porkins</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula1/p4.jpg">
+											<input type="radio" id="peli1_pj4_a" name="peli1_pj4" value="a">
+											<label for="peli1_pj4_a">Greedo</label>
+											<input type="radio" id="peli1_pj4_b" name="peli1_pj4" value="b">
+											<label for="peli1_pj4_b">C-3PO</label>
+											<input type="radio" id="peli1_pj4_c" name="peli1_pj4" value="c">
+											<label for="peli1_pj4_c">Wookiee</label>
+											<input type="radio" id="peli1_pj4_d" name="peli1_pj4" value="d">
+											<label for="peli1_pj4_d">RD-D2</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div id="pelicula2">
+							<img class="poster" src="img/pelicula2/poster.jpg" alt="poster de la pelicula">
+							<h2>EL IMPERIO CONTRAATACA</h2>
+							<div class="pregunta" id="2a">
+								<img class="item" src="img/item.png" alt="item">
+								<label>¿Dónde debe ir Luke según el espectro de Obi-Wan?</label>
+								<select name="peli2_pregunta_a">
+									<option value="null" selected disabled>--Elija una opcion---</option>
+									<option value="a">Al Sistema Hoth</option>
+									<option value="b">Al Sistema Alderaan </option>
+									<option value="c">Al Sistema Dagobah</option>
+									<option value="d">A ninguna parte</option>
+								</select>
+							</div>
+							<div class="pregunta" id="2b">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que le sucede a Luke cuando llega a su destino?</label>
+									<select name="peli2_pregunta_b">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Estrella su Nave en un pantano</option>
+										<option value="b">Pierde el conocimiento</option>
+										<option value="c">Se encuentra con tropas imperiales</option>
+										<option value="d">No encuentra a nadie</option>
+									</select>
+							</div>
+							<div class="pregunta" id="2c">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como elude Han a las fuerzas imperiales?</label>
+									<select name="peli2_pregunta_c">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Salta a la velocidad luz justo a tiempo</option>
+										<option value="b">Esconde el Halcón detrás de un crucero imperial</option>
+										<option value="c">Se camufla en la oscuridad del espacio</option>
+										<option value="d">No lo hace, se rinde</option>
+									</select>
+							</div>
+							<div class="pregunta" id="2d">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Porque el amigo de Han los entrega al imperio?</label>
+									<select name="peli2_pregunta_d">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Trabajaba en secreto para el emperador</option>
+										<option value="b">Le guarda rencor por lo que le hizo</option>
+										<option value="c">Quiere robarle el Halcón Milenario</option>
+										<option value="d">Se ve forzado por las tropas imperiales</option>
+									</select>
+							</div>
+							<div class="pregunta" id="2e">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que le sucede a Han en Bespin?</label>
+									<select name="peli2_pregunta_e">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Pierde su mano derecha</option>
+										<option value="b">Resulta gravemente herido por quemaduras</option>
+										<option value="c">Lo congelan en carbonita</option>
+										<option value="d">Muere</option>
+									</select>
+							</div>
+							<div class="pregunta" id="2f">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Cual es el Plot Twist final de la película?</label>
+										<select name="peli2_pregunta_f">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Han es un lord sith</option>
+										<option value="b">Darth Vader es el padre de Luke</option>
+										<option value="c">Las tropas imperiales son los buenos</option>
+										<option value="d">Leia es la hija del emperador</option>
+								</select>
+							</div>
+
+
+							<h3>¿Quiénes son ellos?</h3>
+
+							<table class="pregunta">
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula2/p1.jpg">
+											<input type="radio" id="peli2_pj1_a" name="peli2_pj1" value="a">
+											<label for="peli2_pj1_a">Mort Goldman</label>
+											<input type="radio" id="peli2_pj1_b" name="peli2_pj1" value="b">
+											<label for="peli2_pj1_b">Lobot</label>
+											<input type="radio" id="peli2_pj1_c" name="peli2_pj1" value="c">
+											<label for="peli2_pj1_c">Lando Calrissian</label>
+											<input type="radio" id="peli2_pj1_d" name="peli2_pj1" value="d">
+											<label for="peli2_pj1_d">Wes Janson</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula2/p2.jpg">
+											<input type="radio" id="peli2_pj2_a" name="peli2_pj2" value="a">
+											<label for="peli2_pj2_a">Lorth Needa</label>
+											<input type="radio" id="peli2_pj2_b" name="peli2_pj2" value="b">
+											<label for="peli2_pj2_b">El Emperador</label>
+											<input type="radio" id="peli2_pj2_c" name="peli2_pj2" value="c">
+											<label for="peli2_pj2_c">Zev Senesca</label>
+											<input type="radio" id="peli2_pj2_d" name="peli2_pj2" value="d">
+											<label for="peli2_pj2_d">Saw Gerrera</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula2/p3.jpg">
+											<input type="radio" id="peli2_pj3_a" name="peli2_pj3" value="a">
+											<label for="peli2_pj3_a">Fenn Rau</label>
+											<input type="radio" id="peli2_pj3_b" name="peli2_pj3" value="b">
+											<label for="peli2_pj3_b">Boba Fett</label>
+											<input type="radio" id="peli2_pj3_c" name="peli2_pj3" value="c">
+											<label for="peli2_pj3_c">Jango Fett</label>
+											<input type="radio" id="peli2_pj3_d" name="peli2_pj3" value="d">
+											<label for="peli2_pj3_d">Paz Vizsla</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula2/p4.jpg">
+											<input type="radio" id="peli2_pj4_a" name="peli2_pj4" value="a">
+											<label for="peli2_pj4_a">Zuckuss</label>
+											<input type="radio" id="peli2_pj4_b" name="peli2_pj4" value="b">
+											<label for="peli2_pj4_b">IG-88</label>
+											<input type="radio" id="peli2_pj4_c" name="peli2_pj4" value="c">
+											<label for="peli2_pj4_c">4-Lom</label>
+											<input type="radio" id="peli2_pj4_d" name="peli2_pj4" value="d">
+											<label for="peli2_pj4_d">Bossk</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>							
+						<div id="pelicula3">
+							<img class="poster" src="img/pelicula3/poster.jpg" alt="poster de la pelicula">
+							<h2>EL RETORNO DEL JEDI</h2>
+							<div class="pregunta" id="3a">
+								<img class="item" src="img/item.png" alt="item">
+								<label >¿Como intentan rescatar sus amigos a Han Solo?</label>
+								<select name="peli3_pregunta_a">
+									<option value="null" selected disabled>--Elija una opcion---</option>
+									<option value="a">Persiguen la nave de Jabba, pero la pierden</option>
+									<option value="b">Se infiltran en el palacio de Jabba, pero son descubiertos</option>
+									<option value="c">Intentan asesinar a Jabba, pero este se escapa</option>
+									<option value="d">Se infiltran en el palacio de Jabba y escapan sin problemas</option>
+								</select>
+							</div>
+							<div class="pregunta" id="3b">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como quiere acabar Jabba con el grupo de héroes?</label>
+									<select name="peli3_pregunta_b">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Quiere que sean devorados por Sarlacc</option>
+										<option value="b">Quiere que sean entregados al imperio</option>
+										<option value="c">Quiere que los arrojen al espacio</option>
+										<option value="d">No quiere que los ejecuten</option>
+									</select>
+							</div>
+							<div class="pregunta" id="3c">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿De qué se entera Luke cuando habla con Obi-Wan?</label>
+									<select name="peli3_pregunta_c">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">De los planes del emperador</option>
+										<option value="b">De como derrotar al imperio</option>
+										<option value="c">De que existe otra estrella de la muerte</option>
+										<option value="d">De que tiene una hermana gemela</option>
+									</select>
+							</div>
+							<div class="pregunta" id="3d">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Con que se encuentran los rebeldes al llegar a Endor?</label>
+									<select name="peli3_pregunta_d">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Con el emperador</option>
+										<option value="b">Con los Gunganianos</option>
+										<option value="c">Con una tribu, habitante del planeta</option>
+										<option value="d">Con Darth Vader</option>
+									</select>
+							</div>
+							<div class="pregunta" id="3e">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como intenta provocar El Emperador a Luke?</label>
+									<select name="peli3_pregunta_e">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Le cuenta como murió su madre</option>
+										<option value="b">Le muestra que las tropas rebeldes se dirigen a su trampa</option>
+										<option value="c">Le dice que Obi-Wan fue quien traiciono a su padre</option>
+										<option value="d">Le habla de su hermana</option>
+									</select>
+							</div>
+							<div class="pregunta" id="3f">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Quién salva a Luke del Emperador?</label>
+										<select name="peli3_pregunta_f">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Obi-Wan</option>
+										<option value="b">Yoda</option>
+										<option value="c">Nadie, Se salva solo</option>
+										<option value="d">Darth Vader</option>
+								</select>
+							</div>
+
+
+							<h3>¿Quiénes son ellos?</h3>
+
+							<table class="pregunta">
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula3/p1.jpg">
+											<input type="radio" id="peli3_pj1_a" name="peli3_pj1" value="a">
+											<label for="peli3_pj1_a">Wedge Antilles</label>
+											<input type="radio" id="peli3_pj1_b" name="peli3_pj1" value="b">
+											<label for="peli3_pj1_b">Mon Mothma</label>
+											<input type="radio" id="peli3_pj1_c" name="peli3_pj1" value="c">
+											<label for="peli3_pj1_c">Darth Sidious</label>
+											<input type="radio" id="peli3_pj1_d" name="peli3_pj1" value="d">
+											<label for="peli3_pj1_d">Gial Ackbar</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula3/p2.jpg">
+											<input type="radio" id="peli3_pj2_a" name="peli3_pj2" value="a">
+											<label for="peli3_pj2_a">Snoke</label>
+											<input type="radio" id="peli3_pj2_b" name="peli3_pj2" value="b">
+											<label for="peli3_pj2_b">Bib Fortuna</label>
+											<input type="radio" id="peli3_pj2_c" name="peli3_pj2" value="c">
+											<label for="peli3_pj2_c">Phasma</label>
+											<input type="radio" id="peli3_pj2_d" name="peli3_pj2" value="d">
+											<label for="peli3_pj2_d">Maz Kanata</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula3/p3.jpg">
+											<input type="radio" id="peli3_pj3_a" name="peli3_pj3" value="a">
+											<label for="peli3_pj3_a">Biggs Darklighter</label>
+											<input type="radio" id="peli3_pj3_b" name="peli3_pj3" value="b">
+											<label for="peli3_pj3_b">Tasu Leech</label>
+											<input type="radio" id="peli3_pj3_c" name="peli3_pj3" value="c">
+											<label for="peli3_pj3_c">Nien Nunb</label>
+											<input type="radio" id="peli3_pj3_d" name="peli3_pj3" value="d">
+											<label for="peli3_pj3_d">Kithaba</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula3/p4.jpg">
+											<input type="radio" id="peli3_pj4_a" name="peli3_pj4" value="a">
+											<label for="peli3_pj4_a">Sarlacc</label>
+											<input type="radio" id="peli3_pj4_b" name="peli3_pj4" value="b">
+											<label for="peli3_pj4_b">Wampa</label>
+											<input type="radio" id="peli3_pj4_c" name="peli3_pj4" value="c">
+											<label for="peli3_pj4_c">Peli Motto</label>
+											<input type="radio" id="peli3_pj4_d" name="peli3_pj4" value="d">
+											<label for="peli3_pj4_d">Jabba The Hutt</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>							
+						<div id="pelicula4">
+							<img class="poster" src="img/pelicula4/poster.jpg" alt="poster de la pelicula">
+							<h2>LA AMENAZA FANTASMA</h2>
+							<div class="pregunta" id="4a">
+								<img class="item" src="img/item.png" alt="item">
+								<label >¿Como terminan los dos Jedis en Naboo?</label>
+								<select name="peli4_pregunta_a">
+									<option value="null" selected disabled>--Elija una opcion---</option>
+									<option value="a">Caen en una capsula de escape</option>
+									<option value="b">Llegan en un transporte de la republica</option>
+									<option value="c">Aterrizan de emergencia luego de una avería en su nave</option>
+									<option value="d">Llegan escondidos en un trasporte tras escapar de una emboscada</option>
+								</select>
+							</div>
+							<div class="pregunta" id="4b">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que descubren los Jedis luego de eludir la emboscada?</label>
+									<select name="peli4_pregunta_b">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Que existe un culto de fuerzas oscuras</option>
+										<option value="b">Que la federación está preparando una invasión a Naboo</option>
+										<option value="c">Que Naboo se encuentra controlado por la federación</option>
+										<option value="d">Que no existe ningún mandatario en Naboo</option>
+									</select>
+							</div>
+							<div class="pregunta" id="4c">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿A quien conocen los Jedis en Tatooine?</label>
+									<select name="peli4_pregunta_c">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">A Anakin Skywalker y su madre</option>
+										<option value="b">A los Hutts</option>
+										<option value="c">A un culto secreto</option>
+										<option value="d">Nunca llegan a Tatooine</option>
+									</select>
+							</div>
+							<div class="pregunta" id="4d">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Porque no pueden comprar los repuestos de la nave los Jedis?</label>
+									<select name="peli4_pregunta_d">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">No saben dónde buscar</option>
+										<option value="b">No tienen dinero suficiente</option>
+										<option value="c">No quedan repuestos para esa nave</option>
+										<option value="d">No aceptan dinero de la Republica en Tatooine</option>
+									</select>
+							</div>
+							<div class="pregunta" id="4e">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Quien acaba con Darth Maul?</label>
+									<select name="peli4_pregunta_e">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Obi-Wan</option>
+										<option value="b">Anakin</option>
+										<option value="c">Qui-Gon</option>
+										<option value="d">Windu</option>
+									</select>
+							</div>
+							<div class="pregunta" id="4f">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Quien se compromete a entrenar a Anakin?</label>
+										<select name="peli4_pregunta_f">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Yoda</option>
+										<option value="b">La Reina Amidala</option>
+										<option value="c">Obi-Wan</option>
+										<option value="d">Palpatine</option>
+								</select>
+							</div>
+
+							<h3>¿Quiénes son ellos?</h3>
+
+							<table class="pregunta">
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula4/p1.jpg">
+											<input type="radio" id="peli4_pj1_a" name="peli4_pj1" value="a">
+											<label for="peli4_pj1_a">Roos Tarpals</label>
+											<input type="radio" id="peli4_pj1_b" name="peli4_pj1" value="b">
+											<label for="peli4_pj1_b">Rugor Nass</label>
+											<input type="radio" id="peli4_pj1_c" name="peli4_pj1" value="c">
+											<label for="peli4_pj1_c">Jar Jar</label>
+											<input type="radio" id="peli4_pj1_d" name="peli4_pj1" value="d">
+											<label for="peli4_pj1_d">Misa</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula4/p2.jpg">
+											<input type="radio" id="peli4_pj2_a" name="peli4_pj2" value="a">
+											<label for="peli4_pj2_a">Padmé Amidala</label>
+											<input type="radio" id="peli4_pj2_b" name="peli4_pj2" value="b">
+											<label for="peli4_pj2_b">Leia Organa</label>
+											<input type="radio" id="peli4_pj2_c" name="peli4_pj2" value="c">
+											<label for="peli4_pj2_c">Femi Taylor</label>
+											<input type="radio" id="peli4_pj2_d" name="peli4_pj2" value="d">
+											<label for="peli4_pj2_d">Shmi Skywalker</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula4/p3.jpg">
+											<input type="radio" id="peli4_pj3_a" name="peli4_pj3" value="a">
+											<label for="peli4_pj3_a">Nute Gunray</label>
+											<input type="radio" id="peli4_pj3_b" name="peli4_pj3" value="b">
+											<label for="peli4_pj3_b">Rune Haako</label>
+											<input type="radio" id="peli4_pj3_c" name="peli4_pj3" value="c">
+											<label for="peli4_pj3_c">Mar Tuuk</label>
+											<input type="radio" id="peli4_pj3_d" name="peli4_pj3" value="d">
+											<label for="peli4_pj3_d">Paw Maccon</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula4/p4.jpg">
+											<input type="radio" id="peli4_pj4_a" name="peli4_pj4" value="a">
+											<label for="peli4_pj4_a">Niffla</label>
+											<input type="radio" id="peli4_pj4_b" name="peli4_pj4" value="b">
+											<label for="peli4_pj4_b">Watto</label>
+											<input type="radio" id="peli4_pj4_c" name="peli4_pj4" value="c">
+											<label for="peli4_pj4_c">Zlato</label>
+											<input type="radio" id="peli4_pj4_d" name="peli4_pj4" value="d">
+											<label for="peli4_pj4_d">Toydariano</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>							
+						<div id="pelicula5">
+							<img class="poster" src="img/pelicula5/poster.jpg" alt="poster de la pelicula">
+							<h2>EL ATAQUE DE LOS CLONES</h2>
+							<div class="pregunta" id="5a">
+								<img class="item" src="img/item.png" alt="item">
+								<label >¿A Quién intentan matar al principio de la película?</label>
+								<select name="peli5_pregunta_a">
+									<option value="null" selected disabled>--Elija una opcion---</option>
+									<option value="a">A La Senadora Amidala</option>
+									<option value="b">Al Maestro Kenobi</option>
+									<option value="c">Al Canciller de la Republica</option>
+									<option value="d">Conde, Una ayudante de la senadora</option>
+								</select>
+							</div>
+							<div class="pregunta" id="5b">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Porque la senadora abandona Coruscant sin votar?</label>
+									<select name="peli5_pregunta_b">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Escapa tras una invasión sorpresa</option>
+										<option value="b">Tiene asuntos más importantes en Naboo</option>
+										<option value="c">Los Jedis la obligan, por su propia seguridad</option>
+										<option value="d">No está de acuerdo con el senado</option>
+									</select>
+							</div>
+							<div class="pregunta" id="5c">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que descubre Obi-Wan en Kamino?</label>
+									<select name="peli5_pregunta_c">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Una ciudad desértica</option>
+										<option value="b">Un ejército de clones destinado para la republica</option>
+										<option value="c">Un credo secreto</option>
+										<option value="d">Una hermandad de cazarrecompensas</option>
+									</select>
+							</div>
+							<div class="pregunta" id="5d">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Por que Anakin tiene la urgencia de ir a Tatooine?</label>
+									<select name="peli5_pregunta_d">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Quiere volver a su casa</option>
+										<option value="b">Se ve obligado para proteger a Padme</option>
+										<option value="c">Se entera que el asesino que buscan está en ese planeta</option>
+										<option value="d">Tiene visiones de su madre siendo torturada</option>
+									</select>
+							</div>
+							<div class="pregunta" id="5e">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que hace Anakin cuando encuentra a su madre?</label>
+									<select name="peli5_pregunta_e">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Intenta revivirla, pero no puede</option>
+										<option value="b">La regresa de vuelta a su hogar</option>
+										<option value="c">Se venga asesinando a todos sus captores</option>
+										<option value="d">La rescata y la regresa con su esposo</option>
+									</select>
+							</div>
+							<div class="pregunta" id="5f">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Quién salva a los Jedis en Geonosis?</label>
+										<select name="peli5_pregunta_f">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">El Maestro Yoda, Con un ejército de clones</option>
+										<option value="b">Anakin y Padme</option>
+										<option value="c">Obi-Wan con otros Jedis</option>
+										<option value="d">El Conde Dooku</option>
+								</select>
+							</div>
+
+
+							<h3>¿Quiénes son ellos?</h3>
+
+							<table class="pregunta">
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula5/p1.jpg">
+											<input type="radio" id="peli5_pj1_a" name="peli5_pj1" value="a">
+											<label for="peli5_pj1_a">Gregar Typho</label>
+											<input type="radio" id="peli5_pj1_b" name="peli5_pj1" value="b">
+											<label for="peli5_pj1_b">Zam Wesell</label>
+											<input type="radio" id="peli5_pj1_c" name="peli5_pj1" value="c">
+											<label for="peli5_pj1_c">Bail Organa</label>
+											<input type="radio" id="peli5_pj1_d" name="peli5_pj1" value="d">
+											<label for="peli5_pj1_d">Del Meeko</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula5/p2.jpg">
+											<input type="radio" id="peli5_pj2_a" name="peli5_pj2" value="a">
+											<label for="peli5_pj2_a">Jango Fett</label>
+											<input type="radio" id="peli5_pj2_b" name="peli5_pj2" value="b">
+											<label for="peli5_pj2_b">Boba Fett</label>
+											<input type="radio" id="peli5_pj2_c" name="peli5_pj2" value="c">
+											<label for="peli5_pj2_c">Din Djarin</label>
+											<input type="radio" id="peli5_pj2_d" name="peli5_pj2" value="d">
+											<label for="peli5_pj2_d">Aurra Sing</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula5/p3.jpg">
+											<input type="radio" id="peli5_pj3_a" name="peli5_pj3" value="a">
+											<label for="peli5_pj3_a">Anakin Skywalker</label>
+											<input type="radio" id="peli5_pj3_b" name="peli5_pj3" value="b">
+											<label for="peli5_pj3_b">Owen Lars</label>
+											<input type="radio" id="peli5_pj3_c" name="peli5_pj3" value="c">
+											<label for="peli5_pj3_c">Beru Lars</label>
+											<input type="radio" id="peli5_pj3_d" name="peli5_pj3" value="d">
+											<label for="peli5_pj3_d">Cliegg Lars</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula5/p4.jpg">
+											<input type="radio" id="peli5_pj4_a" name="peli5_pj4" value="a">
+											<label for="peli5_pj4_a">Jesus</label>
+											<input type="radio" id="peli5_pj4_b" name="peli5_pj4" value="b">
+											<label for="peli5_pj4_b">Obi-Wan Kenobi</label>
+											<input type="radio" id="peli5_pj4_c" name="peli5_pj4" value="c">
+											<label for="peli5_pj4_c">Sifo-Dyas</label>
+											<input type="radio" id="peli5_pj4_d" name="peli5_pj4" value="d">
+											<label for="peli5_pj4_d">Ezra Bridger</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>							
+						<div id="pelicula6">
+							<img class="poster" src="img/pelicula6/poster.jpg" alt="poster de la pelicula">
+							<h2>LA VENGANZA DE LOS SITHS</h2>
+							<div class="pregunta" id="6a">
+								<img class="item" src="img/item.png" alt="item">
+								<label >¿Porque los Jedis no lo hacen maestro a Anakin?</label>
+								<select name="peli6_pregunta_a">
+									<option value="null" selected disabled>--Elija una opcion---</option>
+									<option value="a">Creen que está influenciado por el lado oscuro</option>
+									<option value="b">Descubrieron su relación con Padme</option>
+									<option value="c">No lo creen apto para la enseñar</option>
+									<option value="d">No confían en él, debido a su amistad con el canciller</option>
+								</select>
+							</div>
+							<div class="pregunta" id="6b">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Que intensiones tienen los Jedis con Anakin?</label>
+									<select name="peli6_pregunta_b">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Buscan que envié tropas al senado</option>
+										<option value="b">Quieren que espié al Canciller</option>
+										<option value="c">Quieren influenciarlo para que deje el Consejo Jedi</option>
+										<option value="d">Quieren que continúe con su entrenamiento</option>
+									</select>
+							</div>
+							<div class="pregunta" id="6c">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como reciben a Obi-Wan en el sistema Utapau?</label>
+									<select name="peli6_pregunta_c">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Colaboran con él y le dicen donde se esconde Grievous</option>
+										<option value="b">Le dicen que se vaya ya que no es bienvenido</option>
+										<option value="c">Lo Recibe un Ejército de Droides</option>
+										<option value="d">Nadie lo recibe, todos huyeron</option>
+									</select>
+							</div>
+							<div class="pregunta" id="6d">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como termina el General Grievous?</label>
+									<select name="peli6_pregunta_d">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">No se sabe, es un misterio</option>
+										<option value="b">Huye a otro planeta y no sabemos más</option>
+										<option value="c">Es arrestado por el concejo Jedi</option>
+										<option value="d">Muerto después de recibir unos disparos en el pecho</option>
+									</select>
+							</div>
+							<div class="pregunta" id="6e">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿A quién le rebela su identidad el Canciller?</label>
+									<select name="peli6_pregunta_e">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">A Obi-Wan Kenobi</option>
+										<option value="b">Al Maestro Yoda</option>
+										<option value="c">A Anakin Skywalker</option>
+										<option value="d">Al Maestro Windu</option>
+									</select>
+							</div>
+							<div class="pregunta" id="6f">	
+									<img class="item" src="img/item.png" alt="item">
+									<label>¿Como convence a Anakin el Canciller?</label>
+										<select name="peli6_pregunta_f">
+										<option value="null" selected disabled>--Elija una opcion---</option>
+										<option value="a">Lo convence de que juntos pueden tener todo el poder</option>
+										<option value="b">Le muestra todo lo que puede ganar junto a él</option>
+										<option value="c">Le asegura que los Jedis son corruptos</option>
+										<option value="d">Le dice que solo con el puede salvar a Padme</option>
+								</select>
+							</div>
+
+
+							<h3>¿Quiénes son ellos?</h3>
+
+							<table class="pregunta">
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula6/p1.jpg">
+											<input type="radio" id="peli6_pj1_a" name="peli6_pj1" value="a">
+											<label for="peli6_pj1_a">R4-P17</label>
+											<input type="radio" id="peli6_pj1_b" name="peli6_pj1" value="b">
+											<label for="peli6_pj1_b">C-21</label>
+											<input type="radio" id="peli6_pj1_c" name="peli6_pj1" value="c">
+											<label for="peli6_pj1_c">General Grievous</label>
+											<input type="radio" id="peli6_pj1_d" name="peli6_pj1" value="d">
+											<label for="peli6_pj1_d">Lobot</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula6/p2.jpg">
+											<input type="radio" id="peli6_pj2_a" name="peli6_pj2" value="a">
+											<label for="peli6_pj2_a">Breha Organa</label>
+											<input type="radio" id="peli6_pj2_b" name="peli6_pj2" value="b">
+											<label for="peli6_pj2_b">Rahm Kota</label>
+											<input type="radio" id="peli6_pj2_c" name="peli6_pj2" value="c">
+											<label for="peli6_pj2_c">Jaden Korr</label>
+											<input type="radio" id="peli6_pj2_d" name="peli6_pj2" value="d">
+											<label for="peli6_pj2_d">Bail Organa</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula6/p3.jpg">
+											<input type="radio" id="peli6_pj3_a" name="peli6_pj3" value="a">
+											<label for="peli6_pj3_a">Darth Sidious</label>
+											<input type="radio" id="peli6_pj3_b" name="peli6_pj3" value="b">
+											<label for="peli6_pj3_b">Darth Tyranus</label>
+											<input type="radio" id="peli6_pj3_c" name="peli6_pj3" value="c">
+											<label for="peli6_pj3_c">Darth Plagueis</label>
+											<input type="radio" id="peli6_pj3_d" name="peli6_pj3" value="d">
+											<label for="peli6_pj3_d">Gallius Rax</label>
+										</div>
+									</td>
+									<td>
+										<div class="pregunta">
+											<img class="personaje" alt="pj" src="img/pelicula6/p4.jpg">
+											<input type="radio" id="peli6_pj4_a" name="peli6_pj4" value="a">
+											<label for="peli6_pj4_a">Kyle Katarn</label>
+											<input type="radio" id="peli6_pj4_b" name="peli6_pj4" value="b">
+											<label for="peli6_pj4_b">Ki-Adi Mundi</label>
+											<input type="radio" id="peli6_pj4_c" name="peli6_pj4" value="c">
+											<label for="peli6_pj4_c">Savage Opress</label>
+											<input type="radio" id="peli6_pj4_d" name="peli6_pj4" value="d">
+											<label for="peli6_pj4_d">Mace Windu</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+				</div>
+			</form>						
+			
+		</section>
+		<script src="script.js"></script>	
+	</body>
+</html>

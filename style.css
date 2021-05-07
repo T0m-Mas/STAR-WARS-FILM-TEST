@@ -1,0 +1,385 @@
+			@font-face {
+  				font-family: fontbanner;
+  				src: url(fonts/Starjhol.ttf);
+			}
+			@font-face {
+  				font-family: fontnormal;
+  				src: url(fonts/newsgothic.ttf);
+			}
+			@font-face {
+  				font-family: fontsubtitulo;
+  				src: url(fonts/deathstar.ttf);
+			}
+			section.lista {
+				min-width: 225px;
+				background: none;
+			}
+
+			div.lista{
+				width: 215px;
+				border: 5px solid yellow;
+				float: left;			
+			}
+			.lista ul{
+				padding-left: 0;
+				list-style: none;
+			}
+			.lista li input:focus{
+				outline: none;
+			}
+			.lista li input.selecionado, .lista li input.normal:hover,.normal{/*PARA JAVASCRIPT*/
+				color: red;
+				border: 2px solid red;
+				box-shadow: 5px 5px 1px red;
+			}
+			.lista li input.normal,.normal {/*PARA JAVASCRIPT*/
+				color: yellow;
+				border: 2px solid yellow;
+				box-shadow: 5px 5px 1px yellow;
+				cursor: pointer;
+			}
+
+			.lista {				
+				width: 165px;
+				float: left;
+				background: black;
+			}
+
+			.lista#btnEnvio{
+				/*float: none;*/
+				margin: 0px;
+				margin-top: 10px;			
+			}
+
+			.lista#btnEnvio input,.lista li input,.normal{
+				height: 30px;
+				width: 135px;
+				background: black;
+				color: yellow;
+				border: 2px solid yellow;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				margin-left: 15%;
+				font-family: fontnormal;
+				font-size: 12pt;
+				letter-spacing: 1px;
+				font-weight: bold;
+				text-align: center;				
+				box-shadow: 5px 5px 1px yellow;
+			}
+
+			.lista li input{
+				width: 190px;
+				height: 35px;
+				margin-left: 10px;
+				margin-top: 5px;
+			}
+
+			.lista#btnEnvio input:hover,.lista#btnEnvio input:focus,.normal:focus,.normal:hover{
+				color: red;
+				border: 2px solid red;
+				box-shadow: 5px 5px 1px red;
+				outline: none;
+			}
+			.lista#btnEnvio input:active,.lista li input:active{
+				color: black;
+				border: 2px solid yellow;
+				background: yellow;
+				box-shadow: 5px 5px 1px yellow;
+			}
+			.lista#btnEnvio p{
+				color: red;
+				text-align: center;
+				margin: 2px;
+				display: none;
+				font-family: fontnormal;
+			}
+
+			div.prgnts{
+				margin-left: 5px;
+				width: 784px;
+				height: auto;
+				background: black;
+				border: 5px solid yellow;
+				color: white;
+				float: left;
+			}
+			img.poster{
+				height: 255px;
+				width: 200px;
+				margin-right: 15px;
+				margin-left: 45px;
+				margin-top: 5px;
+				border: 1px solid yellow;
+				box-shadow: 4px 4px 1px yellow;
+				display: block;
+				float: left;
+			}
+			div.prgnts h2,div.prgnts h3{
+				margin-top: 0px;
+				margin-bottom: 10px;
+				padding-top: 12px;
+				color: yellow;
+				width: auto; 
+				font-family: fontsubtitulo;
+				letter-spacing: 2px;
+				font-size: 28px;
+				font-weight: normal;
+				font-stretch: 
+			}
+			div.prgnts h3{
+				text-align: center;
+				padding-bottom: 12px;
+				margin: 0px 0px 0px 0px;
+			}	
+
+			div.pregunta, div.pregunta_bien , div.pregunta_mal{
+				display: block;
+				padding: 15px;
+			}			
+
+			img.item{ 
+				height: 32px;
+				width: 32px;
+				float: left;
+				border: none;
+				padding: 8px;
+				padding-top: 13px;
+			}
+			.pregunta_bien img.item{ 
+				height: 32px;
+				width: 32px;
+				float: left;
+				border: none;
+				padding: 8px;
+				padding-top: 13px;
+				content: url("img/item_bien.png");
+			}
+			.pregunta_mal img.item{ 
+				height: 32px;
+				width: 32px;
+				float: left;
+				border: none;
+				padding: 8px;
+				padding-top: 13px;
+				content: url("img/item_mal.png");
+			}
+			img.personaje{
+				height: 128px;
+				width: 128px;
+				float: left;
+				margin-right: 7px;				
+				margin-bottom: 7px;
+				box-shadow: 4px 4px 1px yellow;				
+			}
+			div.pregunta input{
+				float:left;
+				width: 12pt;
+			}
+			div.pregunta select{
+				border: 1px solid yellow;
+				width: 335px;
+				color: white;
+				background: black;
+				margin-top: 5px;
+				font-family: fontnormal;
+				font-size: 12pt;
+				box-shadow: 2px 2px 1px yellow;
+			}
+			div.pregunta_bien select{
+				border: 1px solid #09ff00;
+				width: 335px;
+				color: #09ff00;
+				background: black;
+				margin-top: 5px;
+				font-family: fontnormal;
+				font-size: 12pt;
+				box-shadow: 2px 2px 1px #09ff00;
+			}
+			div.pregunta_mal select{
+				border: 1px solid red;
+				width: 335px;
+				color: red;
+				background: black;
+				margin-top: 5px;
+				font-family: fontnormal;
+				font-size: 12pt;
+				box-shadow: 2px 2px 1px red;
+			}
+			div.pregunta select:focus , div.pregunta_bien select:focus , div.pregunta_mal select:focus{
+				outline: none;
+			}
+
+			div.pregunta label , div.pregunta_bien label , div.pregunta_mal label{
+				font-family: fontnormal;
+				font-weight: bold;
+				font-size: 15pt;
+				display: block;
+			}
+			table.pregunta{
+				margin-left: 55px;
+				margin-bottom: 60px;
+			}
+			table.pregunta td{
+				width: 330px;
+				height: 180px;				
+			}
+			table.pregunta td div.pregunta label{
+				color:white;
+				margin-top: 7px;
+			}			
+			table.pregunta td div.pregunta label.noclick,table.pregunta td div.pregunta label.noclick:hover,table.pregunta td div.pregunta label.noclick:active{
+				color:white;
+				background: none;
+				margin-top: 7px;
+				cursor: default;
+			}
+			table.pregunta td div.pregunta label:hover,table.pregunta td div.pregunta input:hover{
+				color:yellow;
+				cursor: pointer;
+			}
+			table.pregunta td div.pregunta label:active{
+				color:black;
+				background: yellow;
+			}
+			table.pregunta td div.pregunta input{
+				margin: 12px 5px 0px 5px;
+			}			
+			section.banner{
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+			.banner{
+				background-color: black;
+				border: 5px solid yellow;
+				color: yellow;
+			}
+			.banner h1{
+				text-align: center;
+				font-size: 32pt;
+				font-family: fontbanner;
+				margin-bottom: 0px;
+				margin: 0px;
+				height: 57px; 
+				letter-spacing: 5px;
+			}
+			.banner h2{
+				text-align: center;
+				font-family: fontnormal;
+				font-size: 16pt;
+				color: cyan;
+				letter-spacing: 1px;
+				margin-top: 0px;
+				margin-bottom: 20px;
+			}
+			body{
+				background-image: url("img/fondo1.png");
+				margin: 0 auto;
+				width: 1024px;
+			}
+			#pelicula1,#pelicula2,#pelicula3,#pelicula4,#pelicula5,#pelicula6{
+				display: none;
+				padding-top: 15px;
+				height: 1024px;
+			}
+			div#pelicula1{
+				background-image: url("img/pelicula1/fondomain.jpg");
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			}
+			div#pelicula2{
+				background-image: url("img/pelicula2/fondomain.jpg");
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			}
+			div#pelicula3{
+				background-image: url("img/pelicula3/fondomain.jpg");
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			}
+			div#pelicula4{
+				background-image: url("img/pelicula4/fondomain.jpg");
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			}
+			div#pelicula5{
+				background-image: url("img/pelicula5/fondomain.jpg");
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			}
+			div#pelicula6{
+				background-image: url("img/pelicula6/fondomain.jpg");
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			}
+			
+			div.cajares{
+				border: 5px solid yellow;
+				color: yellow;
+				background: black;
+				height: auto;
+				padding: 50px;
+				padding-bottom: 40px;
+			}
+			div.cajares h1{
+				text-align: center;
+				margin-bottom: 60px;
+				font-family: fontnormal;
+				letter-spacing: 5px;
+			}
+			div.cajares h2,h2.rojo,h2.azul,h2.verde{
+				margin-top: 35px;
+				margin-bottom: 35px;
+				text-align: center;
+				font-family: fontnormal;
+				letter-spacing: 1px;
+				color: white;
+
+			}
+			div.cajares h2.rojo{
+				background-image: url("img/resultado/sablerojo.png");
+			}
+			div.cajares h2.azul{
+				background-image: url("img/resultado/sableazul.png");
+			}
+			div.cajares h2.verde{
+				background-image: url("img/resultado/sableverde.png");
+			}
+			.tablares td{
+				padding-right: 40px;
+				padding-left: 15px;
+				padding-bottom: 10px;				
+				font-family: fontnormal;
+				font-size: 16pt;
+				letter-spacing: 1px;
+				color: white;
+			}
+			div.cajares div{
+				float:left;
+				margin-left: 50px;
+			}
+			img.logores_jedi, img.logores_rebel , img.logores_imperio {
+				width: 215px;
+				height: 215px;
+				margin-top: 0px;
+				margin-left: 95px;
+			}
+			img.logores_imperio{
+				content: url("img/resultado/imperio.png");
+			}
+			img.logores_rebel{
+				content: url("img/resultado/rebel.png");				
+			}
+			img.logores_jedi{
+				content: url("img/resultado/jedi.png");				
+			}
+			.normal {
+				margin-left: 25px;
+			}
+
+			#main {
+				display: block;
+			}
+			#res {
+				display: none;
+			}
